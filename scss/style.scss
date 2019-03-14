@@ -1,0 +1,479 @@
+<<<<<<< HEAD
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+header {
+	width: 100%;
+	height: 50em;
+	background: url('../slike/background.jpg');
+	background-size: cover;
+	padding: 2em 20%;
+
+	.mainNavigation {
+		width: 100%;
+		height: 3.7em;
+		background: #fff;
+		padding: .5em 1em; 
+
+		.logo {
+			display: inline-block;
+			width: 20%;
+			font-weight: bold;
+			font-size: 2em;
+		}
+
+		ul {
+			display: inline-block;
+			width: 79%;
+			text-align: right;
+			list-style: none;
+			text-transform: uppercase;
+
+			li {
+				display: inline-block;
+				margin-left: 1em;
+
+				a {
+					text-decoration: none;
+
+					&:hover {
+						color: $main_red;
+					}
+				}
+			}
+		}
+	}
+
+	h1 {
+		display: block;
+		margin: 22% auto 0;
+		width: 55%;
+		color: #fff;
+		font-weight: normal;
+		text-align: center;
+		font-size: 3em;
+		border-bottom: 1px solid $main_red;
+	}
+
+	h2 {
+		color: #fff;
+		font-weight: normal;
+		text-align: center;
+	}
+}
+
+.redText {
+	color: $main_red;
+}
+
+section {
+	width: 100%;
+	padding: 7em 15%;
+	white-space: nowrap;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 2em;
+		text-transform: uppercase;
+	}
+
+	.column {
+		display: inline-block;
+		width: 25%;
+		white-space: normal;
+		
+		img {
+			display: block;
+		    margin: 0 auto;
+		    width: 80%;
+		}
+
+		h2 {
+			font-weight: normal;
+			text-align: center;
+			font-size: 1.2em;
+		}
+	}
+}
+
+.catalog {
+	background: $grey_background;
+}
+
+.button {
+	display: block;
+	width: 50%;
+	margin: .5em auto 0;
+	padding: .5em  1em;
+	background: $main_red;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: .8em;
+
+	&:hover {
+		background: #000;
+	}
+}
+
+table {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+
+	th, td {
+		padding: 1em;
+	}
+
+	thead {
+		background: $main_red;
+
+		th {
+			color: #fff;
+		}
+
+		th:first-child {
+			background: $red_dark;
+		}
+	}
+
+	tbody {
+		padding: 0 1em;
+
+		tr {
+			border-bottom: 1px solid $main_text_color;
+
+			&:hover {
+				background: $grey_background;
+			}
+
+			td:first-child {
+				font-weight: bold;
+				background: $grey_background;
+			}
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	background: #000;
+	color: #fff;
+	padding: 1em 20%;
+	@include clearfix;
+
+	.logo {
+		border-bottom: 1px solid $main_red;
+		font-size: 1.5em;
+	}
+
+	.info {
+		float: left;
+		padding: 1em;
+		color: #fff;
+		font-size: .9em;
+		font-style: italic;
+	}
+
+	iframe {
+		float: right;
+		padding: 1em;
+		text-align: right;
+	}
+}
+
+.pricingButton { display: none; }
+
+@media screen and(max-width: 1250px) {
+	header { padding: 2em 10%; }
+}
+
+
+@media screen and(max-width: 950px) {
+	header { 
+		padding: 2em 1%; 
+
+		h1 { width: 90%; }
+
+		.mainNavigation {
+			height: 2em;
+			padding: .2em 1em;
+			.logo { font-size: 1em; }
+			ul { font-size: .9em; }
+		}
+	}
+
+	section {
+		padding: 5em 5%;
+		white-space: normal;
+
+		.column {
+			width: 49%;
+			margin-bottom: 5em;
+		}
+	}
+
+	footer {
+		text-align: center;
+		.info, iframe { 
+			width: 100% 
+		}
+	}
+}
+
+@media screen and(max-width: 650px) {
+	header {
+		background: #000;
+		height: auto;
+
+		.mainNavigation {
+			height: auto;
+
+			ul {
+				width: 100%;
+
+				li {
+					width: 100%;
+					text-align: center;
+					padding: 1em;
+				}
+
+			}
+		}
+
+		h1 {
+			margin-top: 1em;
+		}
+	}
+
+	section {
+		.column {
+			width: 100%;
+			margin-bottom: 5em;
+		}
+	}
+
+	.button {
+		padding: 2em;
+	}
+
+	.pricingButton {
+		display: block;
+	}
+
+	table { display: none;}
+=======
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+
+section {
+	padding: 7em 15em;
+}
+
+main, footer {
+	padding: 2em 15em;
+}
+
+main {
+	height: 100vh;
+	background-image: url("../slike/background.jpg");
+	background-size: cover;
+}
+
+header {
+	background-color: #fff;
+	padding: 1em;
+	@include clearfix;
+}
+
+.logo {
+	font-size: 2em;
+	font-family: $logo_font;
+	font-weight: bold;
+	float: left;
+	span {
+		color: $main_red;
+	}
+}
+nav {
+	float: right;
+	ul {
+		margin-top: 1em;
+		list-style: none;
+		li {
+			display: inline-block;
+			margin-left: 1em;
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+h1, h3 {
+	color: #fff;
+	text-align: center;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 3em;
+	border-bottom: 1px solid $main_red;
+	width: 60%;
+	margin: 20% auto 0;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 2em;
+}
+
+#catalog {
+	background-color: $grey_background;
+	@include clearfix;
+
+	.column {
+		float: left;
+		width: 25%;
+		text-align: center;
+		img {
+			width: 90%;
+		}
+		p {
+			margin: 1em 0;
+		}
+
+	}
+}
+.button {
+	background-color: $main_red;
+	padding: 0.5em 2em;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover {
+		background-color: #000;
+	}
+}
+
+#pricing {
+	text-align: center;
+	a {
+		display: none;
+	}
+	table {
+		width: 60%;
+		margin: 0 auto;
+		border-collapse: collapse; 
+		td,th {
+			padding: 1em;
+			text-align: center;
+		}
+		thead {
+			background: $main_red;
+			th {
+				color: #fff;
+				&:first-child {background-color: $red_dark;}
+			}
+		}
+		tbody {
+			tr {border-bottom: 1px solid $main_text_color;}
+			td:first-child {background-color: $grey_background;}
+		}
+	}
+}
+
+footer {
+	background-color: #000;
+	@include clearfix;
+	.logo {
+		font-size: 1.5em;
+		border-bottom: 1px solid $main_red;
+		width: 100%;
+	}
+	address, .map {
+		margin: 1em;
+	}
+	address {
+		float: left;
+	}
+	.map {
+		float: right;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	main {
+		padding: 2em 1em;
+		h1 {
+			width: 100%;
+		}
+	}
+	section {
+		padding: 3.5em 7.5em;
+	}
+
+	footer {
+		padding: 2em 7.5em;
+		text-align: center;
+		address, .map {
+			float: none;
+		}
+	}
+	#catalog {
+		.column {
+			width: 50%;
+			margin-bottom: 2em;
+		}
+	}
+
+}
+
+@media screen and (max-width: 750px) {
+	main {
+		background-image: none;
+		background-color: #000;
+		height: auto;
+		padding: 2em 0;
+		h1 {
+			margin-top: 2em;
+		}
+	}
+	nav {
+		width: 100%;
+		ul {
+			li {
+				width: 100%;
+				text-align: center;
+				margin: .5em 0;
+			}
+		}
+	}
+	#catalog {
+		.column {
+			width: 100%;
+		}
+	}
+	#pricing {
+		table {
+			display: none;
+		}
+		a {
+			display: inline-block;
+		}
+	}
+>>>>>>> a074bacbddbd025ec6e1fc8f6b0e358b5a0b5e99
+}
